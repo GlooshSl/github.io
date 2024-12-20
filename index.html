@@ -22,6 +22,9 @@
             justify-content: space-between;
             align-items: center;
             margin: 20px 0;
+            background-color: #111;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         nav {
@@ -99,21 +102,27 @@
 
         .side-images {
             position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 0;
+            width: 300px;
+            height: 100%;
+            overflow: hidden;
         }
 
         .side-images.left {
-            left: 5px;
+            left: 0;
         }
 
         .side-images.right {
-            right: 5px;
+            right: 0;
         }
 
         .side-images img {
-            width: 450px;
-            margin-bottom: 10px;
+            width: 100%;
+            display: block;
+        }
+
+        .side-images img + img {
+            margin-top: -4px;
         }
 
         @media screen and (max-width: 768px) {
@@ -147,11 +156,13 @@
     </header>
 
     <div class="side-images left">
-        <img src="left-image.jpg" alt="Left Image">
+        <img src="left-image1.jpg" alt="Left Image 1">
+        <img src="left-image2.jpg" alt="Left Image 2">
     </div>
 
     <div class="side-images right">
-        <img src="right-image.jpg" alt="Right Image">
+        <img src="right-image1.jpg" alt="Right Image 1">
+        <img src="right-image2.jpg" alt="Right Image 2">
     </div>
 
     <section id="home" class="section">
@@ -161,13 +172,11 @@
 
     <section id="factions" class="section">
         <h1>Фракции</h1>
-        <p>В Total War: Warhammer 3 вы найдете огромное количество фракций, которые вы сможете возглавить и с которыми сможете завоевывать. Некоторые из них:</p>
+        <p>В Total War: Warhammer 3 вы найдете огромное количество фракций. Некоторые из них:</p>
         <ul>
-            <li>The Empire</li>
-            <li>High Elves</li>
-            <li>Greenskins</li>
-            <li>Skaven</li>
-            <li>Chaos Warriors</li>
+            <li>The Empire <img src="empire.jpg" alt="Empire"></li>
+            <li>High Elves <img src="high_elves.jpg" alt="High Elves"></li>
+            <li>Chaos Demons <img src="chaos_demons.jpg" alt="Chaos Demons"></li>
         </ul>
     </section>
 
