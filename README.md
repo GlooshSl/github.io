@@ -1,0 +1,1 @@
+This project is a website representing our challenge. Everyone knows about Warhammer, and everyone knows about Total War, but no one knows about the Total War: Warhammer series. That's why we decided to use the frontend skills learned in the course to change this situation.
