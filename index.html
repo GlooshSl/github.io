@@ -103,7 +103,7 @@
         .side-images {
             position: fixed;
             top: 0;
-            width: 300px;
+            width: 450px;
             height: 100%;
             overflow: hidden;
         }
@@ -123,6 +123,29 @@
 
         .side-images img + img {
             margin-top: -4px;
+        }
+
+        .factions-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .factions-list li {
+            list-style: none;
+            text-align: center;
+        }
+
+        .factions-list img {
+            width: 200px;
+            height: auto;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .factions-list img:hover {
+            transform: scale(1.1);
         }
 
         @media screen and (max-width: 768px) {
@@ -156,13 +179,13 @@
     </header>
 
     <div class="side-images left">
-        <img src="left-image1.jpg" alt="Left Image 1">
-        <img src="left-image2.jpg" alt="Left Image 2">
+        <img src="https://www.cosmocover.com/wp-content/uploads/2022/02/slaanesh_screenshots_asset_02_final-scaled.jpg" alt="Left Image 1">
+        <img src="https://vkplay.ru/pre_0x736_resize/hotbox/content_files/news/2021/12/15/df42433cd9304a6ca6693aa090dbd5d8.jpg?quality=85" style="transform: scaleX(-1);" alt="Left Image 2">
     </div>
 
     <div class="side-images right">
-        <img src="right-image1.jpg" alt="Right Image 1">
-        <img src="right-image2.jpg" alt="Right Image 2">
+        <img src="https://img.championat.com/s/1350x900/news/big/o/m/v-total-war-warhammer-3-mozhno-igrat-besplatno-do-13-marta_16784429641797758516.jpg" alt="Right Image 1">
+        <img src="https://vkplay.ru/pre_0x736_resize/hotbox/content_files/news/2022/02/03/1e7179b60ee64a40af5cf76278c03ba9.jpg?quality=85" alt="Right Image 2">
     </div>
 
     <section id="home" class="section">
@@ -173,10 +196,19 @@
     <section id="factions" class="section">
         <h1>Фракции</h1>
         <p>В Total War: Warhammer 3 вы найдете огромное количество фракций. Некоторые из них:</p>
-        <ul>
-            <li>The Empire <img src="empire.jpg" alt="Empire"></li>
-            <li>High Elves <img src="high_elves.jpg" alt="High Elves"></li>
-            <li>Chaos Demons <img src="chaos_demons.jpg" alt="Chaos Demons"></li>
+        <ul class="factions-list">
+            <li>
+                <img src="https://avatars.mds.yandex.net/i?id=8a16ff44e6a3805c3804ae3e2e4eb1ab76c4e51b-7546766-images-thumbs&n=13" alt="Empire">
+                <p>The Empire</p>
+            </li>
+            <li>
+                <img src="https://avatars.mds.yandex.net/i?id=20cc4992f40a6cecb0d837d43dc1844a_l-5239342-images-thumbs&n=13" alt="High Elves">
+                <p>High Elves</p>
+            </li>
+            <li>
+                <img src="https://www.nme.com/wp-content/uploads/2022/01/Warhammer-3-Daemon-Prince-2000x1270-1.jpg" alt="Chaos Demons">
+                <p>Chaos Demons</p>
+            </li>
         </ul>
     </section>
 
