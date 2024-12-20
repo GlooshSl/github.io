@@ -22,11 +22,17 @@
             justify-content: space-between;
             align-items: center;
             margin: 20px 0;
-            background-color: #111;
+            background-color: #222;
             padding: 10px;
             border-radius: 5px;
             position: relative;
             z-index: 3;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
         }
 
         nav {
@@ -66,6 +72,9 @@
             text-align: center;
             position: relative;
             z-index: 2;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
         }
 
         .section h1 {
@@ -109,7 +118,7 @@
         .side-images {
             position: fixed;
             top: 0;
-            width: 450px;
+            width: 350px;
             height: 100%;
             overflow: hidden;
         }
@@ -126,16 +135,6 @@
             width: 100%;
             height: auto;
             object-fit: cover;
-        }
-
-        .background-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1;
         }
 
         .factions-list {
@@ -182,6 +181,10 @@
             header {
                 width: 90%;
             }
+
+            .side-images {
+                width: 150px;
+            }
         }
     </style>
 </head>
@@ -189,6 +192,7 @@
     <div class="background-overlay"></div>
 
     <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Total_War_Warhammer_III_cover_art.jpg" alt="Logo">
         <div class="hamburger" onclick="this.classList.toggle('active');">
             <div></div>
             <div></div>
@@ -207,7 +211,7 @@
     </div>
 
     <div class="side-images right">
-        <img src="https://img.championat.com/s/1350x900/news/big/o/m/v-total-war-warhammer-3-mozhno-igrat-besplatно-do-13-marta_16784429641797758516.jpg" alt="Right Image 1">
+        <img src="https://img.championat.com/s/1350x900/news/big/o/m/v-total-war-warhammer-3-mozhno-igrat-besplatно-do-13-mарта_16784429641797758516.jpg" alt="Right Image 1">
         <img src="https://vkplay.ru/pre_0x736_resize/hotbox/content_files/news/2022/02/03/1e7179b60ee64a40af5cf76278c03ba9.jpg?quality=85" alt="Right Image 2">
     </div>
 
