@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,13 +29,6 @@
             z-index: 100;
         }
 
-        header img {
-            width: 50px;
-            height: 50px;
-            background-color: #000;
-            border-radius: 5px;
-        }
-
         nav {
             display: flex;
             gap: 20px;
@@ -57,15 +50,17 @@
             min-height: 100vh;
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             position: relative;
+            padding-top: 60px;
         }
 
         section h1 {
             font-size: 3rem;
-            margin: 0;
+            margin-bottom: 20px;
         }
 
         section p {
@@ -88,7 +83,8 @@
         }
 
         #contacts, #about {
-            display: none;
+            min-height: 100vh;
+            padding: 20px;
         }
 
         .form-container {
@@ -129,17 +125,44 @@
         .form-container button:hover {
             background-color: #e63900;
         }
+
+        .factions-images {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .factions-images div {
+            text-align: center;
+        }
+
+        .factions-images img {
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+            border: 2px solid #fff;
+            transition: transform 0.3s;
+        }
+
+        .factions-images img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://avatars.mds.yandex.net/i?id=6d4b377e8ef81a788ee50d459e2ca74accb50146-5888323-images-thumbs&n=13" alt="Logo">
         <nav>
-            <a href="#home">Home</a>
-            <a href="#factions">Factions</a>
-            <a href="#time">Right Now</a>
-            <a href="#contacts">Contacts</a>
-            <a href="#about">About Us</a>
+            <a href="#home">Главная</a>
+            <a href="#factions">Фракции</a>
+            <a href="#time">Самое время</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#about">О нас</a>
         </nav>
     </header>
 
@@ -150,19 +173,33 @@
     </section>
 
     <section id="factions">
-        <div class="background" style="background-image: url('https://avatars.mds.yandex.net/i?id=8a16ff44e6a3805c3804ae3e2e4eb1ab76c4e51b-7546766-images-thumbs&n=13');"></div>
+        <div class="background" style="background-image: url('https://vkplay.ru/pre_0x736_resize/hotbox/content_files/news/2021/12/15/df42433cd9304a6ca6693aa090dbd5d8.jpg?quality=85');"></div>
         <h1>Фракции</h1>
         <p>Изучите разнообразие фракций, каждая из которых имеет уникальные способности и стиль игры.</p>
+        <div class="factions-images">
+            <div>
+                <h3>Имперцы</h3>
+                <img src="https://avatars.mds.yandex.net/i?id=8a16ff44e6a3805c3804ae3e2e4eb1ab76c4e51b-7546766-images-thumbs&n=13" alt="Имперцы">
+            </div>
+            <div>
+                <h3>Эльфы</h3>
+                <img src="https://avatars.mds.yandex.net/i?id=20cc4992f40a6cecb0d837d43dc1844a_l-5239342-images-thumbs&n=13" alt="Эльфы">
+            </div>
+            <div>
+                <h3>Хаос</h3>
+                <img src="https://www.nme.com/wp-content/uploads/2022/01/Warhammer-3-Daemon-Prince-2000x1270-1.jpg" alt="Хаос">
+            </div>
+        </div>
     </section>
 
     <section id="time">
-        <div class="background" style="background-image: url('https://img.championat.com/s/1350x900/news/big/o/m/v-total-war-warhammer-3-mozhno-igrat-besplatно-do-13-марта_16784429641797758516.jpg');"></div>
+        <div class="background" style="background-image: url('https://vkplay.ru/pre_0x736_resize/hotbox/content_files/news/2022/02/03/1e7179b60ee64a40af5cf76278c03ba9.jpg?quality=85');"></div>
         <h1>Самое время</h1>
         <p>Присоединяйтесь сейчас и участвуйте в битве, которая определит будущее!</p>
     </section>
 
     <section id="contacts">
-        <h1>Свяжитесь с нами</h1>
+        <h1>Контакты</h1>
         <form class="form-container" onsubmit="event.preventDefault(); alert('Спасибо за ваш отзыв!');">
             <label for="name">Ваше имя:</label>
             <input type="text" id="name" name="name" required>
