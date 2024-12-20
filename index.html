@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total War: Warhammer 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ff6600;
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+
+        .hamburger-toggle {
+            display: none;
+        }
+
+        .hamburger-toggle:checked + .hamburger-menu + .nav-links {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #1a1a1a;
+            width: 100%;
+        }
+
+        .hamburger-toggle:checked + .hamburger-menu span {
+            background-color: #ff6600;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .faction-list {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .faction {
+            text-align: center;
+            width: 30%;
+        }
+
+        .faction img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .faction img:hover {
+            transform: scale(1.05);
+        }
+
+        .cta-button {
+            background-color: #ff6600;
+            border: none;
+            padding: 15px 30px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e65c00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Панель навигации -->
+    <header>
+        <nav>
+            <div class="logo">Total War: Warhammer 3</div>
+            <ul class="nav-links">
+                <li><a href="#description">Описание</a></li>
+                <li><a href="#factions">Фракции</a></li>
+                <li><a href="#news">Самое время</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            <!-- Гамбургер меню -->
+            <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
+            <label for="hamburger-toggle" class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <section id="description">
+            <h1>Общее описание игры</h1>
+            <p>Total War: Warhammer 3 — это стратегическая игра, которая погружает игрока в мир эпической войны, магии и фантастических существ. Здесь вы сможете управлять многочисленными фракциями и вести их к победе на поле боя.</p>
+        </section>
+
+        <section id="factions">
+            <h2>Фракции</h2>
+            <p>В игре представлено множество фракций, каждая из которых имеет уникальный стиль игры и стратегию. Вот некоторые из них:</p>
+            <div class="faction-list">
+                <div class="faction">
+                    <img src="image1.jpg" alt="Фракция 1">
+                    <p>Фракция 1</p>
+                </div>
+                <div class="faction">
+                    <img src="image2.jpg" alt="Фракция 2">
+                    <p>Фракция 2</p>
+                </div>
+                <div class="faction">
+                    <img src="image3.jpg" alt="Фракция 3">
+                    <p>Фракция 3</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <h2>Самое время</h2>
+            <p>12 декабря было выпущено юбилейное дополнение с сотым лордом! На Steam сейчас проходит зимняя распродажа, которая продлится до 2 января.</p>
+            <button class="cta-button">Успей приобрести</button>
+        </section>
+
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы — команда разработчиков и фанатов игры, которые помогают распространять информацию о Total War: Warhammer 3 и поддерживать сообщество игроков.</p>
+        </section>
+
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <p>Если у вас есть вопросы, свяжитесь с нами по электронной почте: support@warhammer.com.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Total War: Warhammer 3</p>
+    </footer>
+</body>
+</html>
