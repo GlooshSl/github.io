@@ -14,236 +14,172 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-x: hidden;
         }
 
         header {
-            width: 60%;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 20px 0;
+            padding: 10px 20px;
             background-color: #222;
-            padding: 10px;
-            border-radius: 5px;
-            position: relative;
-            z-index: 3;
+            position: fixed;
+            top: 0;
+            z-index: 100;
         }
 
         header img {
             width: 50px;
             height: 50px;
-            margin-right: 10px;
+            background-color: #000;
+            border-radius: 5px;
         }
 
         nav {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 5px 10px;
-            border: 1px solid #fff;
-            transition: all 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         nav a:hover {
-            background-color: #fff;
-            color: #000;
+            background-color: #555;
         }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            cursor: pointer;
-        }
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: #fff;
-        }
-
-        .section {
-            width: 60%;
-            margin-bottom: 40px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .section h1 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .section h1:hover {
-            color: #ff4500;
-        }
-
-        .section p, .section ul {
-            font-size: 1.1em;
-            line-height: 1.5;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
-            background-color: #ff4500;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #fff;
-            color: #000;
-        }
-
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            position: relative;
-            z-index: 2;
-        }
-
-        .side-images {
-            position: fixed;
-            top: 0;
-            width: 350px;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .side-images.left {
-            left: 0;
-        }
-
-        .side-images.right {
-            right: 0;
-        }
-
-        .side-images img {
+        section {
+            min-height: 100vh;
             width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .factions-list {
             display: flex;
             justify-content: center;
-            gap: 15px;
-        }
-
-        .factions-list li {
-            list-style: none;
+            align-items: center;
             text-align: center;
+            position: relative;
         }
 
-        .factions-list img {
-            width: 150px;
-            height: auto;
-            border: 1px solid #fff;
+        section h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.4);
+        }
+
+        #contacts, #about {
+            display: none;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .form-container label {
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            transition: transform 0.3s;
+            font-size: 1rem;
         }
 
-        .factions-list img:hover {
-            transform: scale(1.1);
+        .form-container button {
+            padding: 10px;
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        @media screen and (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            nav {
-                display: none;
-                flex-direction: column;
-            }
-
-            .hamburger.active + nav {
-                display: flex;
-            }
-
-            .section {
-                width: 90%;
-            }
-
-            header {
-                width: 90%;
-            }
-
-            .side-images {
-                width: 150px;
-            }
+        .form-container button:hover {
+            background-color: #e63900;
         }
     </style>
 </head>
 <body>
-    <div class="background-overlay"></div>
-
     <header>
-        <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Total_War_Warhammer_III_cover_art.jpg" alt="Logo">
-        <div class="hamburger" onclick="this.classList.toggle('active');">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <img src="https://avatars.mds.yandex.net/i?id=6d4b377e8ef81a788ee50d459e2ca74accb50146-5888323-images-thumbs&n=13" alt="Logo">
         <nav>
             <a href="#home">Home</a>
             <a href="#factions">Factions</a>
             <a href="#time">Right Now</a>
+            <a href="#contacts">Contacts</a>
+            <a href="#about">About Us</a>
         </nav>
     </header>
 
-    <div class="side-images left">
-        <img src="https://www.cosmocover.com/wp-content/uploads/2022/02/slaanesh_screenshots_asset_02_final-scaled.jpg" alt="Left Image 1">
-        <img src="https://vkplay.ru/pre_0x736_resize/hotbox/content_files/news/2021/12/15/df42433cd9304a6ca6693aa090dbd5d8.jpg?quality=85" style="transform: scaleX(-1);" alt="Left Image 2">
-    </div>
-
-    <div class="side-images right">
-        <img src="https://img.championat.com/s/1350x900/news/big/o/m/v-total-war-warhammer-3-mozhno-igrat-besplatно-do-13-mарта_16784429641797758516.jpg" alt="Right Image 1">
-        <img src="https://vkplay.ru/pre_0x736_resize/hotbox/content_files/news/2022/02/03/1e7179b60ee64a40af5cf76278c03ba9.jpg?quality=85" alt="Right Image 2">
-    </div>
-
-    <section id="home" class="section">
+    <section id="home">
+        <div class="background" style="background-image: url('https://www.cosmocover.com/wp-content/uploads/2022/02/slaanesh_screenshots_asset_02_final-scaled.jpg');"></div>
         <h1>Добро пожаловать в Total War: Warhammer 3</h1>
-        <p>Ультимативная стратегическая игра, где вас ждут эпические сражения и бесконечные возможности. Погрузитесь в богатый мир, наполненный разнообразными фракциями, огромными армиями и захватывающими кампаниями.</p>
+        <p>Погрузитесь в мир стратегических сражений, богатых фракций и эпических историй.</p>
     </section>
 
-    <section id="factions" class="section">
+    <section id="factions">
+        <div class="background" style="background-image: url('https://avatars.mds.yandex.net/i?id=8a16ff44e6a3805c3804ae3e2e4eb1ab76c4e51b-7546766-images-thumbs&n=13');"></div>
         <h1>Фракции</h1>
-        <p>В Total War: Warhammer 3 вы найдете огромное количество фракций. Некоторые из них:</p>
-        <ul class="factions-list">
-            <li>
-                <img src="https://avatars.mds.yandex.net/i?id=8a16ff44e6a3805c3804ae3e2e4eb1ab76c4e51b-7546766-images-thumbs&n=13" alt="Empire">
-                <p>The Empire</p>
-            </li>
-            <li>
-                <img src="https://avatars.mds.yandex.net/i?id=20cc4992f40a6cecb0d837d43dc1844a_l-5239342-images-thumbs&n=13" alt="High Elves">
-                <p>High Elves</p>
-            </li>
-            <li>
-                <img src="https://www.nme.com/wp-content/uploads/2022/01/Warhammer-3-Daemon-Prince-2000x1270-1.jpg" alt="Chaos Demons">
-                <p>Chaos Demons</p>
-            </li>
-        </ul>
+        <p>Изучите разнообразие фракций, каждая из которых имеет уникальные способности и стиль игры.</p>
     </section>
 
-    <section id="time" class="section">
+    <section id="time">
+        <div class="background" style="background-image: url('https://img.championat.com/s/1350x900/news/big/o/m/v-total-war-warhammer-3-mozhno-igrat-besplatно-do-13-марта_16784429641797758516.jpg');"></div>
         <h1>Самое время</h1>
-        <p>Совсем недавно, 12 декабря, было выпущено невероятное новое дополнение, которое добавило 100-го юбилейного легендарного лорда!</p>
-        <p>Не упустите возможность воспользоваться зимней распродажей в Steam, которая проходит прямо сейчас и продлится до 2 января. Забирайте эту эпическую игру и все её дополнения по отличным скидкам.</p>
-        <a href="https://store.steampowered.com/app/1142710/Total_War_WARHAMMER_III/" class="btn">Забирай сейчас</a>
+        <p>Присоединяйтесь сейчас и участвуйте в битве, которая определит будущее!</p>
+    </section>
+
+    <section id="contacts">
+        <h1>Свяжитесь с нами</h1>
+        <form class="form-container" onsubmit="event.preventDefault(); alert('Спасибо за ваш отзыв!');">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <section id="about">
+        <h1>О нас</h1>
+        <p>Мы — сообщество фанатов Total War, которое стремится делиться своим опытом и страстью к игре. Присоединяйтесь к нам, чтобы узнать больше о мире Warhammer 3!</p>
     </section>
 
     <footer>
